@@ -6,6 +6,10 @@ import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Profile from "./pages/Profile";
+import EmotionCalendar from "./pages/EmotionCalendar";
+import FormToday from "./components/Forms/FormToday";
+import FormProfile from "./components/Forms/FormProfile"
+
 
 function App() {
   return (
@@ -16,6 +20,9 @@ function App() {
         <Route exact path="/signin" component={Signin} />
         <Route exact path="/signup" component={Signup} />
         <ProtectedRoute exact path="/profile" component={Profile} />
+        <Route path ="/calendar" component={EmotionCalendar}/>
+        <Route path ="/today" component={FormToday}/>
+        <Route path ="/profile/update" component={FormProfile}/>
       </Switch>
     </div>
   );

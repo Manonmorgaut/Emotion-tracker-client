@@ -44,9 +44,72 @@ export default {
       .catch(errorHandler);
   },
 
-  getItems() {
+  getAllUsers() {
     return service
-      .get("/api/items")
+      .get("/api/users")
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  getOneUser(id) {
+    return service
+      .get(`/api/users/${id}`)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  createOneUser(data) {
+    return service
+      .post("/api/users", data)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  updateOneUser(id, data) {
+    return service
+      .patch(`/api/users/${id}`, data)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  deleteOneUser(id) {
+    return service
+      .delete(`/api/users/${id}`)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  getAllEmotions() {
+    return service
+      .get("/api/emotions")
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  getOneEmotion(id) {
+    return service
+      .get(`/api/emotions/${id}`)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  createOneEmotion(data) {
+    return service
+      .post("/api/emotions",data)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  updateOneEmotion(id, data) {
+    return service
+      .patch(`/api/emotions/${id}`, data)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  deleteOneEmotion(id) {
+    return service
+      .delete(`/api/emotions/${id}`)
       .then((res) => res.data)
       .catch(errorHandler);
   },
