@@ -1,0 +1,26 @@
+#FormToday3 {
+    width: 100%;
+    height: 100%;
+    font-weight: 100;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  #FormToday3 h1 {
+    color: var(--color-orange);
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  
+  #FormToday3 h2 {
+    color: var(--color-darkGreen);
+    font-size: 1rem;
+    font-weight: 100;
+  }
+
+  #FormToday3 #whatReasonTitle {
+    text-align:center;
+    margin-top:8vh;
+    margin-bottom:6vh;
+    }

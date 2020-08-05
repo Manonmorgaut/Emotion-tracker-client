@@ -1,0 +1,33 @@
+#FooterNav {
+  width: 100%;
+  position: fixed;
+  bottom: 0vh;
+}
+
+#FooterNav .nav-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2vh;
+  background-color: rgba(237, 246, 249, 0.4);
+}
+
+#FooterNav .nav-list a {
+  text-decoration: none;
+  color: var(--color-orange);
+}
+
+#FooterNav .nav-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#FooterNav #footerProfileImg {
+  width: 8vh;
+  height: 8vh;
+  object-fit: cover;
+  border-radius: 50%;
+}

@@ -66,7 +66,8 @@ export class FormToday extends Component {
   render() {
     if (this.state.index === 0) {
       return (
-        <div>
+        <div className="FormToday">
+           <img src="/Images/Logo.png" alt="Logo" id="logo" />
           <FormToday1
             handleChange={this.handleChange}
             emotionName={this.state.emotion.name}
@@ -77,7 +78,8 @@ export class FormToday extends Component {
       );
     } else if (this.state.index === 1) {
       return (
-        <div>
+        <div className="FormToday">
+           <img src="/Images/Logo.png" alt="Logo" id="logo" />
           <FormToday2
             handleChange={this.handleChange}
             emotionName={this.state.emotion.name}
@@ -88,7 +90,8 @@ export class FormToday extends Component {
       );
     } else if (this.state.index === 2) {
       return (
-        <div>
+        <div className="FormToday">
+           <img src="/Images/Logo.png" alt="Logo" id="logo" />
           <FormToday3
             handleChange={this.handleChange}
             emotionName={this.state.emotion.name}
@@ -109,7 +112,9 @@ export class FormToday extends Component {
         <div>
           <FormTodayThanks />
           <Link title="go to home page" to={`/`}>
-            <button> Go to homepage </button>
+            <div className="FormToday">
+              <button> Back to homepage </button>
+            </div>
             <Footernav />
           </Link>
         </div>

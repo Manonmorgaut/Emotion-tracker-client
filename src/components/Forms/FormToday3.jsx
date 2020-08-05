@@ -1,18 +1,24 @@
 import React, { Component } from "react";
+var moment = require("moment");
 
 export class FormToday3 extends Component {
   render() {
+    var today = new Date();
+    let momentToday = moment(today).format("DD MMM YYYY");
     return (
-      <React.Fragment>
-        <h1>What made you feel {this.props.emotionName}? </h1>
+      <div id="FormToday3">
+        <div id="whatReasonTitle">
+          <h1>{momentToday}</h1>
+          <h2>What made you feel {this.props.emotionName}? </h2>
+        </div>
         <textarea
           type="text"
-          rows="5" 
+          rows="5"
           cols="33"
           id="emotionTrigger"
           onChange={this.props.handleChange}
         />
-      </React.Fragment>
+      </div>
     );
   }
 }

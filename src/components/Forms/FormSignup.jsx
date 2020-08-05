@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 import UserContext from "../Auth/UserContext";
 import apiHandler from "../../api/apiHandler";
 import IconAvatar from "./../../components/icon/IconAvatar";
+import { Link } from "react-router-dom";
 
 class FormSignup extends Component {
   static contextType = UserContext;
@@ -59,33 +60,62 @@ class FormSignup extends Component {
     const { email, password, firstName, lastName, tmpProfileImg } = this.state;
 
     return (
-      <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
-        <label htmlFor="firstName">First Name</label>
-        <input
-          type="text"
-          id="firstName"
-          name="firstName"
-          defaultValue={firstName}
-        />
-        <label htmlFor="lastName">Last Name</label>
-        <input
-          type="text"
-          id="lastName"
-          name="lastName"
-          defaultValue={lastName}
-        />
-        <IconAvatar profileImg={tmpProfileImg} clbk={this.handleImage} />
-        <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="email" defaultValue={email} />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          defaultValue={password}
-        />
-        <button>Create account</button>
-      </form>
+      <div id="FormSignup">
+        <img src="/Images/Logo.png" alt="Logo" id="logo" />
+        <h1>Create account</h1>
+        <p>
+          Already have an account?
+          <Link title="Signin" to={`/signin`} id="spanLink">
+            <span> Sign in</span>
+          </Link>
+        </p>
+        <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
+          <div className="formField">
+            <label htmlFor="firstName">First Name</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              defaultValue={firstName}
+              placeholder="John"
+            />
+          </div>
+          <div className="formField">
+            <label htmlFor="lastName">Last Name</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              defaultValue={lastName}
+              placeholder="Appleseed"
+            />
+          </div>
+          <div className="fileImportButton">
+            <IconAvatar profileImg={tmpProfileImg} clbk={this.handleImage} />
+          </div>
+          <div className="formField">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              defaultValue={email}
+              placeholder="john.appleseed@gmail.com"
+            />
+          </div>
+          <div className="formField">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              defaultValue={password}
+              placeholder="●●●●●●●●"
+            />
+          </div>
+          <button className="button button3">Create account</button>
+        </form>
+      </div>
     );
   }
 }

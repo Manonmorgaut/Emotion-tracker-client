@@ -1,0 +1,79 @@
+button {
+  text-decoration: none;
+  box-shadow: none;
+  border: none;
+}
+
+#buttonLink {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-weight: 100;
+  margin: 2vh;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 100;
+}
+
+.button1 {
+  border-radius: 10px;
+  background-color: var(--color-lightGreen);
+  border: 1px solid var(--color-lightGreen);
+  width: 90%;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.button2 {
+  border-radius: 10px;
+  background-color: var(--color-darkGreen);
+  border: 1px solid var(--color-darkGreen);
+  width: 90%;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.button3 {
+  background-color: var(--color-darkGreen);
+  border: 1px solid var(--color-darkGreen);
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 50;
+  height: 5vh;
+  width: 90%;
+}
+
+.fileImportButton {
+  display: flex;
+  flex-direction: column;
+}
+
+#bigRoundButton {
+  height: 14vh;
+  width: 14vh;
+  background-color: var(--color-darkGreen);
+  border-radius: 50%;
+  color: white;
+  box-shadow: none;
+  font-weight:100;
+  font-size:1rem;
+  padding:2vh;
+}
+
+.button4 {
+  background-color: var(--color-orange);
+  border: 1px solid var(--color-orange);
+  border-radius: 4px;
+  padding: 1vh;
+  font-size: 1rem;
+  font-weight: 50;
+  height: 5vh;
+  width: 70%;
+  color:white;
+}

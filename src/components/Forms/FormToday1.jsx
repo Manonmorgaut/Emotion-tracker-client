@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+var moment = require("moment");
+
 const emotions = [
   {
     name: "Happy",
@@ -29,23 +31,33 @@ const emotions = [
 
 export class FormToday1 extends Component {
   render() {
+    var today = new Date();
+    let momentToday = moment(today).format("DD MMM YYYY");
     return (
-      <div>
-      <h1>How are you feeling today? </h1>
-        {emotions.map((emotion) => {
-          return (
-            <React.Fragment key={emotion.name}>
-              <input
-                type="radio"
-                id="name"
-                name={emotion.name}
-                checked={this.props.emotionName === emotion.name}
-                onChange={this.props.handleChange}
-              />
-              <label htmlFor="name">{emotion.name}</label>
-            </React.Fragment>
-          );
-        })}
+      <div id="FormToday1">
+        <div id="allEmotionsTitle">
+          <h1>{momentToday}</h1>
+          <h2>How are you feeling today? </h2>
+        </div>
+        <div id="allEmotions">
+          {emotions.map((emotion) => {
+            return (
+              <div key={emotion.name}>
+                <label htmlFor="name" className="emotionSelector">
+                  <input
+                    type="radio"
+                    id="name"
+                    name={emotion.name}
+                    checked={this.props.emotionName === emotion.name}
+                    onChange={this.props.handleChange}
+                  />
+                  <img src={emotion.img} alt={this.props.emotionName} />
+                  <p>{emotion.name}</p>
+                </label>
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   }

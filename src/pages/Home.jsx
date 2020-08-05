@@ -8,11 +8,11 @@ export class Home extends Component {
   render() {
     const { user } = this.context;
     return (
-      <React.Fragment>
+      <div id ="Home">
         {user && <Welcome />}
 
         {!user && <SigninPage />}
-      </React.Fragment>
+      </div>
     );
   }
 }

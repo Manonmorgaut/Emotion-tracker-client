@@ -1,0 +1,59 @@
+#FormSignin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  margin-top: 20vh;
+  font-weight: 100;
+}
+#FormSignin form {
+  width: 100%;
+}
+
+#FormSignin .formField {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-darkGreen);
+  border-radius: 4px;
+  margin: 2vh;
+  width: 90%;
+  height: 5vh;
+}
+
+#FormSignin .formField label {
+  font-size: 9px;
+  font-weight: 200;
+  color: var(--color-darkGreen);
+  padding-left: 1vh;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+}
+::placeholder {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.2);
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-right: 1vh;
+  padding-left: 1vh;
+}
+
+#FormSignin .formField input {
+  border: none;
+}
+
+#FormSignin #logo {
+  height: 20vh;
+  margin-bottom: 10vh;
+}
+
+#FormSignin p {
+  color: var(--color-darkGreen);
+  margin: 0 auto;
+  font-size: 0.9rem;
+}
+
+#FormSignin #spanLink {
+  color: var(--color-darkGreen);
+  font-weight: 400;
+  text-decoration: none;
+}

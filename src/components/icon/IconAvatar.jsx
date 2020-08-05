@@ -1,8 +1,8 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog } from '@fortawesome/free-solid-svg-icons';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCog } from "@fortawesome/free-solid-svg-icons";
 
-function IconAvatar({ clbk, avatar = '' }) {
+function IconAvatar({ clbk, avatar = "" }) {
   const fileInput = React.createRef();
 
   const handleClick = () => {
@@ -10,11 +10,11 @@ function IconAvatar({ clbk, avatar = '' }) {
   };
 
   return (
-    <div className={'is-clickable icon-avatar'} title="change avatar">
+    <React.Fragment>
       {avatar && <img src={avatar} alt="user avatar" />}
-      <input ref={fileInput} type="file" className="is-hidden" onChange={clbk} />
-      <FontAwesomeIcon onClick={handleClick} className="is-clickable fa-lg" icon={faCog} />
-    </div>
+      <input ref={fileInput} type="file" onChange={clbk} />
+      <FontAwesomeIcon onClick={handleClick} icon={faCog} />
+    </React.Fragment>
   );
 }
 

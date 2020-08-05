@@ -8,13 +8,16 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Profile from "./pages/Profile";
 import EmotionCalendar from "./pages/EmotionCalendar";
 import FormToday from "./components/Forms/FormToday";
-import FormProfile from "./components/Forms/FormProfile"
+import FormProfile from "./components/Forms/FormProfile";
+// ?? To uncomment
+// import CalendarDate from "./components/CalendarDate";
+
+
 
 
 function App() {
   return (
     <div className="App">
-      <NavMain />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/signin" component={Signin} />
@@ -23,6 +26,8 @@ function App() {
         <Route path ="/calendar" component={EmotionCalendar}/>
         <Route path ="/today" component={FormToday}/>
         <Route path ="/profile/update" component={FormProfile}/>
+        {/* ?? To uncomment */}
+        {/* <Route path ="/calendar/date" component={CalendarDate}/> */}
       </Switch>
     </div>
   );

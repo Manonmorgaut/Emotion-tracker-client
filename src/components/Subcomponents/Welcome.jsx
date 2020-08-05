@@ -8,12 +8,27 @@ export class Welcome extends Component {
   render() {
     const { user } = this.context;
     return (
-      <div>
-        <h1> Hi {user.firstName}! </h1>
-        <img src={user.profileImg} alt={user.firstName} />
-        <Link title="go to create form" to={`/today`}>
-          <button> This button should take you to your survey </button>
-        </Link>
+      <div id="Welcome">
+        <img src="/Images/Logo.png" alt="Logo" id="logo" />
+
+        <div id="WelcomeSubDiv">
+          <img
+            id="welcomeProfileImg"
+            src={user.profileImg}
+            alt={user.firstName}
+          />
+          <h1>
+            {" "}
+            Hi <span id="firstNameSpan">{user.firstName} </span>!{" "}
+          </h1>
+          <div>
+            <p>How are you feeling </p>
+            <p>today?</p>
+          </div>
+          <Link title="Today" to={`/today`} id="Link">
+            <button id ="bigRoundButton"> Tell us here </button>
+          </Link>
+        </div>
         <Footernav />
       </div>
     );

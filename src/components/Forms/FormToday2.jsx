@@ -1,10 +1,17 @@
 import React, { Component } from "react";
+var moment = require("moment");
 
 export class FormToday2 extends Component {
   render() {
+    var today = new Date();
+    let momentToday = moment(today).format("DD MMM YYYY");
     return (
-        <React.Fragment>
-        <h1>How {this.props.emotionName} are you?</h1>
+      <div id="FormToday2">
+        <div id="howMuchTitle">
+          <h1>{momentToday}</h1>
+          <h2>How {this.props.emotionName} are you?</h2>
+        </div>
+
         <input
           type="range"
           min="1"
@@ -12,7 +19,7 @@ export class FormToday2 extends Component {
           onChange={this.props.handleChange}
           id="intensity"
         />
-      </React.Fragment>
+      </div>
     );
   }
 }

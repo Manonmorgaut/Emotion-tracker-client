@@ -4,6 +4,8 @@ import CardEmotion from "../components/Cards/CardEmotion";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import Footernav from "./../components/FooterNav";
+import { Redirect } from "react-router-dom";
+
 var moment = require("moment");
 
 export class EmotionCalendar extends Component {
@@ -22,6 +24,15 @@ export class EmotionCalendar extends Component {
       })
       .catch((err) => console.log(err));
   }
+// ?? To uncomment
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (prevState !== this.state) {
+  //     <Redirect
+  //       to="/calendar/date"
+  //       emotions={this.state.emotionsOfSelectedDate}
+  //     />
+  //   }
+  // };
 
   onChange = (date) =>
     this.setState({ date }, () => {
@@ -30,7 +41,15 @@ export class EmotionCalendar extends Component {
         (emotion) =>
           moment(emotion.created_at).format("DD MMM YYYY") === momentStateDate
       );
-      this.setState({ emotionsOfSelectedDate: oneEmotion });
+      this.setState(
+        { emotionsOfSelectedDate: oneEmotion }
+        //   () => {
+        //   <Redirect
+        //     to="/calendar/date"
+        //     emotions={this.state.emotionsOfSelectedDate}
+        //   />;
+        // }
+      );
     });
 
   onClickDay = () => {

@@ -2,7 +2,7 @@ import UserContext from "../components/Auth/UserContext";
 import apiHandler from "../api/apiHandler";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Footernav from "./../components/FooterNav"
+import Footernav from "./../components/FooterNav";
 
 export class Profile extends Component {
   static contextType = UserContext;
@@ -21,14 +21,27 @@ export class Profile extends Component {
   render() {
     const { user } = this.context;
     return (
-      <div>
-        <img src={user.profileImg} alt={user.firstName} />
-        <h2>First Name : {user.firstName}</h2>
-        <h2>Last Name : {user.lastName}</h2>
-        <h2>Email Adress : {user.email}</h2>
-        <h2>Psychologist Contact : {user.psyContact}</h2>
-        <Link title="Update profile" to={`/profile/update`}>
-          <button> Update profile </button>
+      <div id="Profile">
+        <img src="/Images/Logo.png" alt="Logo" id="logo" />
+
+        <img id="profileImage" src={user.profileImg} alt={user.firstName} />
+        <div id="profileInfo">
+          <p>
+            {" "}
+            <span> First Name : </span> {user.firstName}
+          </p>
+          <p>
+            <span> Last Name : </span> {user.lastName}
+          </p>
+          <p>
+            <span>Email Adress : </span> {user.email}
+          </p>
+          <p>
+            <span>Psychologist Contact : </span> {user.psyContact}
+          </p>
+        </div>
+        <Link id="buttonLink" title="Update profile" to={`/profile/update`}>
+          <button className="button4"> Update profile </button>
         </Link>
         {/* <button onClick={this.deleteProfile}> Delete profile </button> */}
         <Footernav />
