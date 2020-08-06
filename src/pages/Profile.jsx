@@ -18,6 +18,17 @@ export class Profile extends Component {
       });
   };
 
+  //  handleLogout = () => {
+  //   apiHandler
+  //     .logout()
+  //     .then(() => {
+  //       context.removeUser();
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
+
   render() {
     const { user } = this.context;
     return (
@@ -43,6 +54,7 @@ export class Profile extends Component {
         <Link id="buttonLink" title="Update profile" to={`/profile/update`}>
           <button className="button4"> Update profile </button>
         </Link>
+        {/* <button className="button5" onClick={handleLogout}>Logout</button> */}
         {/* <button onClick={this.deleteProfile}> Delete profile </button> */}
         <Footernav />
       </div>

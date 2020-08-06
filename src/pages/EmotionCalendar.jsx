@@ -24,7 +24,6 @@ export class EmotionCalendar extends Component {
       })
       .catch((err) => console.log(err));
   }
-// ?? To uncomment
   // componentDidUpdate(prevProps, prevState) {
   //   if (prevState !== this.state) {
   //     <Redirect
@@ -37,19 +36,20 @@ export class EmotionCalendar extends Component {
   onChange = (date) =>
     this.setState({ date }, () => {
       const momentStateDate = moment(this.state.date).format("DD MMM YYYY");
-      const oneEmotion = this.state.emotions.filter(
+      const dayEmotions = this.state.emotions.filter(
         (emotion) =>
           moment(emotion.created_at).format("DD MMM YYYY") === momentStateDate
       );
-      this.setState(
-        { emotionsOfSelectedDate: oneEmotion }
+      //this.setState(
+        //{ emotionsOfSelectedDate: oneEmotion }
         //   () => {
         //   <Redirect
         //     to="/calendar/date"
         //     emotions={this.state.emotionsOfSelectedDate}
         //   />;
         // }
-      );
+      //);
+        this.props.history.push(`/calendar/date`, {emotions:dayEmotions})
     });
 
   onClickDay = () => {
@@ -58,7 +58,8 @@ export class EmotionCalendar extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div id="EmotionCalendar">
+      <img src="/Images/Logo.png" alt="Logo" id="logo" />
         <Calendar
           onChange={this.onChange}
           value={this.state.date}
@@ -66,13 +67,13 @@ export class EmotionCalendar extends Component {
             this.onClickDay();
           }}
         />
-        {this.state.emotionsOfSelectedDate.map((oneEmotion) => (
+        {/* {this.state.emotionsOfSelectedDate.map((oneEmotion) => (
           <li key={oneEmotion._id}>
             <CardEmotion emotion={oneEmotion} />
           </li>
-        ))}
+        ))} */}
         <Footernav />
-      </React.Fragment>
+      </div>
     );
   }
 }

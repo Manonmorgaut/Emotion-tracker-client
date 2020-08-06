@@ -45,7 +45,7 @@ export class CardEmotion extends Component {
     const dateToFormat = new Date(this.props.emotion.created_at);
 
     return (
-      <div>
+      <div id="CardEmotion">
         <h1>
           <Moment format="DD MMM YYYY HH:mm" date={dateToFormat} />
         </h1>

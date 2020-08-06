@@ -40,18 +40,19 @@ export class FormToday1 extends Component {
           <h2>How are you feeling today? </h2>
         </div>
         <div id="allEmotions">
-          {emotions.map((emotion) => {
+          {emotions.map((emotion) => {        
             return (
               <div key={emotion.name}>
                 <label htmlFor="name" className="emotionSelector">
                   <input
                     type="radio"
-                    id="name"
-                    name={emotion.name}
+                    id={emotion.name}
+                    name="name"
+                    value={emotion.name}
                     checked={this.props.emotionName === emotion.name}
                     onChange={this.props.handleChange}
                   />
-                  <img src={emotion.img} alt={this.props.emotionName} />
+                  <img src={emotion.img} alt={emotion.name} />
                   <p>{emotion.name}</p>
                 </label>
               </div>

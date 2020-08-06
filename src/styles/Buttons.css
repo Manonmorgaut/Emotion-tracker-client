@@ -77,3 +77,15 @@ button {
   width: 70%;
   color:white;
 }
+
+.button5 {
+  background-color: var(--color-darkGreen);
+  border: 1px solid var(--color-darkGreen);
+  border-radius: 4px;
+  padding: 1vh;
+  font-size: 1rem;
+  font-weight: 50;
+  height: 5vh;
+  width: 70%;
+  color:white;
+}
