@@ -6,7 +6,7 @@ export class SigninPage extends Component {
     return (
       <div id="SigninPage">
 
-        <img src="/Images/Logo.png" alt="Logo" id="logo" />
+        <img src="/Images/Logo.png" alt="Logo" id="signinLogo" />
 
         <Link title="Login" to={`/signin`} id ="buttonLink">
           <button class="button button1">LOGIN</button>

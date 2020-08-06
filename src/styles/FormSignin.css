@@ -5,6 +5,7 @@
   height: 100%;
   margin-top: 20vh;
   font-weight: 100;
+  text-align:center;
 }
 #FormSignin form {
   width: 100%;
@@ -39,11 +40,6 @@
 
 #FormSignin .formField input {
   border: none;
-}
-
-#FormSignin #logo {
-  height: 20vh;
-  margin-bottom: 10vh;
 }
 
 #FormSignin p {

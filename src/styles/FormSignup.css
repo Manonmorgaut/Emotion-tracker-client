@@ -41,11 +41,6 @@
   border: none;
 }
 
-#FormSignup #logo {
-  height: 20vh;
-  margin-bottom: 10vh;
-}
-
 #FormSignup p {
   color: var(--color-darkGreen);
   margin: 0 auto;
