@@ -8,5 +8,35 @@
   text-align: center;
   margin-top: 12vh;
   color: var(--color-darkGreen);
+  list-style: none;
+  text-align:center;
 }
 
+#CardEmotion p {
+  font-weight: 100;
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
+}
+
+#CardEmotion h1 {
+  color: var(--color-orange);
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 2vh;
+}
+
+#CardEmotion span {
+  font-weight: 500;
+}
+
+#CardEmotion img {
+  width: 20vh;
+  height: 20vh;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 1vh;
+}
+
+#CardEmotion button {
+  
+}

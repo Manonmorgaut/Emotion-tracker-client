@@ -43,7 +43,7 @@ export class FormToday1 extends Component {
           {emotions.map((emotion) => {        
             return (
               <div key={emotion.name}>
-                <label htmlFor="name" className="emotionSelector">
+                <label htmlFor={emotion.name} className="emotionSelector">
                   <input
                     type="radio"
                     id={emotion.name}

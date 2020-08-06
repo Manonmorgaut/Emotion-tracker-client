@@ -28,7 +28,6 @@ export class FormToday extends Component {
     if (event.target.type === "radio") {
       emotion[event.target.name] = event.target.value;
       let value = event.target.value
-      debugger
     } else if (
       event.target.type === "range" ||
       event.target.type === "textarea"

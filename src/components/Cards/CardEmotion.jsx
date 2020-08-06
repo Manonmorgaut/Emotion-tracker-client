@@ -53,8 +53,10 @@ export class CardEmotion extends Component {
         <img src={this.state.image} alt={this.props.emotion.emotion.name} />
 
         <h2>{this.props.emotion.emotion.name}</h2>
-        <h2>{this.props.emotion.emotion.intensity}</h2>
-        <h2>{this.props.emotion.emotion.emotionTrigger}</h2>
+        <p><span> Intensity </span></p> 
+        <p>{this.props.emotion.emotion.intensity}</p>
+        <p><span> Reason </span></p> 
+        <p>{this.props.emotion.emotion.emotionTrigger}</p>
       </div>
     );
   }
