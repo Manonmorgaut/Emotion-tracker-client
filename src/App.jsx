@@ -10,6 +10,7 @@ import EmotionCalendar from "./pages/EmotionCalendar";
 import FormToday from "./components/Forms/FormToday";
 import FormProfile from "./components/Forms/FormProfile";
 import CalendarDate from "./pages/CalendarDate";
+import EmotionFilter from "./pages/EmotionFilter";
 
 
 
@@ -26,6 +27,7 @@ function App() {
         <Route path ="/today" component={FormToday}/>
         <Route path ="/profile/update" component={FormProfile}/>
         <Route exact path ="/calendar/date" component={CalendarDate}/>
+        <Route exact path ="/calendar/emotionfilter" component={EmotionFilter}/>
       </Switch>
     </div>
   );

@@ -1,5 +1,5 @@
 #CardEmotion {
-  width: 100%;
+  width: 80%;
   height: 100%;
   font-weight: 100;
   display: flex;
@@ -10,6 +10,9 @@
   color: var(--color-darkGreen);
   list-style: none;
   text-align:center;
+  margin-right:3vh;
+  margin-left:3vh;
+
 }
 
 #CardEmotion p {
@@ -35,8 +38,4 @@
   object-fit: cover;
   border-radius: 50%;
   padding: 1vh;
-}
-
-#CardEmotion button {
-  
 }

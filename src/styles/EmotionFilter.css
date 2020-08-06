@@ -1,0 +1,30 @@
+#EmotionFilter {
+  width: 100%;
+  height: 100%;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align:center;
+  list-style:none;
+}
+
+#EmotionFilter #filterTitle {
+    margin-top:12vh;
+}
+
+#EmotionFilter h2 {
+    font-size:rem;
+    font-weight:400;
+    color: var(--color-darkGreen);
+}
+
+#emotion {
+    margin-top:8vh;
+    height:5vh;
+}
+
+#EmotionFilter #buttonLink {
+    margin-top:8vh;
+    margin-bottom:28vh;
+}

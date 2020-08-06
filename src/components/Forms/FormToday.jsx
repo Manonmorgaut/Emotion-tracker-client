@@ -68,7 +68,15 @@ export class FormToday extends Component {
     if (this.state.index === 0) {
       return (
         <div className="FormToday">
+
+<Link
+          id="buttonLink"
+          title="Homepage"
+          to={`/`}
+        >
            <img src="/Images/Logo.png" alt="Logo" id="logo" />
+
+        </Link>
           <FormToday1
             handleChange={this.handleChange}
             emotionName={this.state.emotion.name}

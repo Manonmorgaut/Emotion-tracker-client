@@ -37,19 +37,21 @@ export class Profile extends Component {
 
         <img id="profileImage" src={user.profileImg} alt={user.firstName} />
         <div id="profileInfo">
-          <p>
-            {" "}
-            <span> First Name : </span> {user.firstName}
-          </p>
-          <p>
-            <span> Last Name : </span> {user.lastName}
-          </p>
-          <p>
-            <span>Email Adress : </span> {user.email}
-          </p>
-          <p>
-            <span>Psychologist Contact : </span> {user.psyContact}
-          </p>
+          <h2> First Name </h2>
+
+          <p>{user.firstName}</p>
+
+          <h2> Last Name </h2>
+
+          <p>{user.lastName}</p>
+
+          <h2>Email Adress </h2>
+
+          <p>{user.email}</p>
+
+          <h2>Psychologist Contact</h2>
+
+          <p>{user.psyContact}</p>
         </div>
         <Link id="buttonLink" title="Update profile" to={`/profile/update`}>
           <button className="button4"> Update profile </button>

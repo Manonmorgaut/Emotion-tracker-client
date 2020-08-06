@@ -13,13 +13,13 @@
   padding:1vh;
 }
 
-/* HIDE RADIO
-/* [type="radio"] {
+/* HIDE RADIO */
+[type="radio"] {
   position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
-} */ */
+}
 
 /* IMAGE STYLES */
 [type="radio"] + img {
@@ -28,7 +28,7 @@
 
 /* CHECKED STYLES */
 [type="radio"]:checked + img {
-  outline: 2px solid #f00;
+  outline: 1px solid var(--color-orange);
 }
 
 #FormToday1 #allEmotions {
@@ -53,6 +53,7 @@
 
 #FormToday1 p {
 padding-top:1vh;
+font-weight:500;
 }
 
 #FormToday1 h1 {

@@ -11,17 +11,23 @@
 }
 
 #Profile #profileImage {
-    width:13vh;
-    height:13vh;
+    width:15vh;
+    height:15vh;
     object-fit:cover;
     border-radius:50%
 }
 
-#Profile span {
+#Profile h2 {
     font-weight:400;
+    margin-top:3vh;
+    font-size:1.2rem;
 }
 
 #Profile #profileInfo {
     margin-top:6vh;
     margin-bottom:6vh;
+}
+#Profile p {
+    margin-top:1vh;
+    margin-bottom:1vh;
 }

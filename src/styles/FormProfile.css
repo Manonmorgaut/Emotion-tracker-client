@@ -17,14 +17,14 @@
     border-radius: 4px;
     margin: 2vh;
     width: 90%;
-    height: 5vh;
+    height: 8vh;
   }
 
-::placeholder {
+  #FormProfile input {
     font-size: 16px;
     color: rgba(0, 0, 0, 0.2);
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
     padding-right: 1vh;
     padding-left: 1vh;
   }
