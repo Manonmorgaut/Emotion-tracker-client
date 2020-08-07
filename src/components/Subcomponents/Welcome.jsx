@@ -9,8 +9,9 @@ export class Welcome extends Component {
     const { user } = this.context;
     return (
       <div id="Welcome">
-        <img src="/Images/Logo.png" alt="Logo" id="logo" />
-
+        <Link id="buttonLink" title="Homepage" to={`/`}>
+          <img src="/Images/Logo.png" alt="Logo" id="logo" />
+        </Link>
         <div id="WelcomeSubDiv">
           <img
             id="welcomeProfileImg"
@@ -26,7 +27,7 @@ export class Welcome extends Component {
             <p>today?</p>
           </div>
           <Link title="Today" to={`/today`} id="Link">
-            <button id ="bigRoundButton"> Tell us here </button>
+            <button id="bigRoundButton"> Tell us here </button>
           </Link>
         </div>
         <Footernav />

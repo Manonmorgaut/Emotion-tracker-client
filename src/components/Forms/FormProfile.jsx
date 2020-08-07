@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import UserContext from "../Auth/UserContext";
 import apiHandler from "./../../api/apiHandler";
 import Footernav from "./../../components/FooterNav";
+import { Link } from "react-router-dom";
+
 
 export class FormProfile extends Component {
   static contextType = UserContext;
@@ -25,7 +27,8 @@ export class FormProfile extends Component {
     apiHandler
       .updateOneUser(userId, this.state)
       .then((apiRes) => {
-        console.log(apiRes);
+        console.log("this is apires", apiRes);
+        this.context.setUser(apiRes);
         this.props.history.push("/profile");
       })
       .catch((err) => console.log(err));
@@ -36,7 +39,14 @@ export class FormProfile extends Component {
 
     return (
       <div id="FormProfile">
-        <img src="/Images/Logo.png" alt="Logo" id="logo" />
+                <Link 
+          id="buttonLink"
+          title="Homepage"
+          to={`/`}
+        >
+           <img src="/Images/Logo.png" alt="Logo" id="logo" />
+
+        </Link>
         <form
           onChange={this.handleChange}
           onSubmit={(event) => {

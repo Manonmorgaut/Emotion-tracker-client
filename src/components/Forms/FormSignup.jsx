@@ -61,7 +61,9 @@ class FormSignup extends Component {
 
     return (
       <div id="FormSignup">
-        <img src="/Images/Logo.png" alt="Logo" id="logo" />
+        <Link id="buttonLink" title="Homepage" to={`/`}>
+          <img src="/Images/Logo.png" alt="Logo" id="logo" />
+        </Link>{" "}
         <h1>Create account</h1>
         <p>
           Already have an account?

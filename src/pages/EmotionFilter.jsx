@@ -8,7 +8,7 @@ export class EmotionFilter extends Component {
   state = {
     emotion: "",
     emotionsArray: [],
-    allEmotions:[],
+    allEmotions: [],
   };
 
   componentDidMount() {
@@ -44,8 +44,9 @@ export class EmotionFilter extends Component {
   render() {
     return (
       <div id="EmotionFilter">
-        <img src="/Images/Logo.png" alt="Logo" id="logo" />
-
+        <Link id="buttonLink" title="Homepage" to={`/`}>
+          <img src="/Images/Logo.png" alt="Logo" id="logo" />
+        </Link>
         <div id="filterTitle">
           <h2>Select an emotion below</h2>
           <h2>to see all the calendar entries</h2>

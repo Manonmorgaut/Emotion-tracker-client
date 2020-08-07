@@ -45,8 +45,14 @@ class FormSignin extends Component {
   render() {
     return (
       <div id="FormSignin">
-        <img src="/Images/Logo.png" alt="Logo" id="logo" />
-        <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
+        <Link 
+          id="buttonLink"
+          title="Homepage"
+          to={`/`}
+        >
+           <img src="/Images/Logo.png" alt="Logo" id="logo" />
+
+        </Link>        <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
           <div className="formField">
             <label htmlFor="email">Email adress</label>
             <input

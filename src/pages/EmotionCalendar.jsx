@@ -43,7 +43,9 @@ export class EmotionCalendar extends Component {
   render() {
     return (
       <div id="EmotionCalendar">
-        <img src="/Images/Logo.png" alt="Logo" id="logo" />
+        <Link id="buttonLink" title="Homepage" to={`/`}>
+          <img src="/Images/Logo.png" alt="Logo" id="logo" />
+        </Link>{" "}
         <Calendar
           onChange={this.onChange}
           value={this.state.date}

@@ -77,6 +77,8 @@ button {
   height: 5vh;
   width: 70%;
   color:white;
+  margin-top:1vh;
+  margin-bottom:1vh;
 }
 
 .button5 {
@@ -89,4 +91,6 @@ button {
   height: 5vh;
   width: 70%;
   color:white;
+  margin-top:1vh;
+  margin-bottom:1vh;
 }

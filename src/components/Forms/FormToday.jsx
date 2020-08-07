@@ -27,7 +27,7 @@ export class FormToday extends Component {
 
     if (event.target.type === "radio") {
       emotion[event.target.name] = event.target.value;
-      let value = event.target.value
+      let value = event.target.value;
     } else if (
       event.target.type === "range" ||
       event.target.type === "textarea"
@@ -68,15 +68,11 @@ export class FormToday extends Component {
     if (this.state.index === 0) {
       return (
         <div className="FormToday">
-
-<Link
-          id="buttonLink"
-          title="Homepage"
-          to={`/`}
-        >
-           <img src="/Images/Logo.png" alt="Logo" id="logo" />
-
-        </Link>
+          <Link id="buttonLink" title="Homepage" to={`/`}>
+            <Link id="buttonLink" title="Homepage" to={`/`}>
+              <img src="/Images/Logo.png" alt="Logo" id="logo" />
+            </Link>
+          </Link>
           <FormToday1
             handleChange={this.handleChange}
             emotionName={this.state.emotion.name}
@@ -88,7 +84,9 @@ export class FormToday extends Component {
     } else if (this.state.index === 1) {
       return (
         <div className="FormToday">
-           <img src="/Images/Logo.png" alt="Logo" id="logo" />
+          <Link id="buttonLink" title="Homepage" to={`/`}>
+            <img src="/Images/Logo.png" alt="Logo" id="logo" />
+          </Link>{" "}
           <FormToday2
             handleChange={this.handleChange}
             emotionName={this.state.emotion.name}
@@ -100,7 +98,9 @@ export class FormToday extends Component {
     } else if (this.state.index === 2) {
       return (
         <div className="FormToday">
-           <img src="/Images/Logo.png" alt="Logo" id="logo" />
+          <Link id="buttonLink" title="Homepage" to={`/`}>
+            <img src="/Images/Logo.png" alt="Logo" id="logo" />
+          </Link>{" "}
           <FormToday3
             handleChange={this.handleChange}
             emotionName={this.state.emotion.name}
